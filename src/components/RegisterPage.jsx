@@ -2,10 +2,12 @@ import { useState } from "react";
 import '../styles/App.css'
 import '../styles/form.css'
 import axios from "axios";
+import apiClient from "../api/axios";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = "registerUser"
+
 export default function RegisterUser(){
 
     const [username,setUsername] = useState("")
@@ -32,7 +34,7 @@ export default function RegisterUser(){
         }
     
         try {
-            const response = await axios.post(
+            const response = await apiClient.post(
                 REGISTER_URL,
                 { username, password },       // The data being sent
                 { headers: { "Content-Type": "application/json" } } // Optional headers

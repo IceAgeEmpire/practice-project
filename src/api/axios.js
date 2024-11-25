@@ -1,5 +1,10 @@
 import axios from 'axios';
 
-export default axios.create({
-    baseURL: 'http://localhost:5173'
+const apiClient = axios.create({
+    baseURL: 'http://localhost:8080', // Backend URL
+    headers: {
+        'Content-Type': 'application/json',
+    },
 });
+
+export default apiClient;
