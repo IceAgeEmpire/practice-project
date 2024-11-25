@@ -1,0 +1,31 @@
+.navigation-bar {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: space-between; /* Space items to push Logout to the bottom */
+  height: 100vh; /* Ensure full height of the navigation bar */
+  width: 10%;
+  text-align: center;
+}
+
+.navigation-bar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-bar .link {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid rgb(72, 72, 72);
+  background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
